@@ -59,9 +59,17 @@ namespace ProjectSistemPakar
                     if (!penyakit.Contains(iteratorPenyakit))
                     {
                         penyakit.Add(iteratorPenyakit);
-                        parent.hasil.txtKesimpulan.Text += iteratorPenyakit + Environment.NewLine;
+                        //parent.hasil.txtKesimpulan.Text += iteratorPenyakit + Environment.NewLine;
                     }
                     
+                }
+            }
+            foreach(string idPenyakit in penyakit)
+            {
+                foreach(string idGejala in parent.data.getCekBox())
+                {
+                    string idGejalaPenyakit = model.selectGejalaPenyakit(idPenyakit, idGejala);
+                    parent.hasil.txtKesimpulan.Text += idGejalaPenyakit + Environment.NewLine;
                 }
             }
         }

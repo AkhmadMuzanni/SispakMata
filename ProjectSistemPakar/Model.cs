@@ -29,9 +29,19 @@ namespace ProjectSistemPakar
             koneksi.Close();
             return arrayPenyakit;
         }
-        //public string selectPenyakitbyIdGejala()
+        public string selectGejalaPenyakit(string idPenyakit, string idGejala)
+        {
+            koneksi.Open();
+            queri = "SELECT idGejalaPenyakit from gejalapenyakit where idPenyakit = '" + idPenyakit + "' AND idGejala = '" + idGejala + "'";
+            command = new MySqlCommand(queri, koneksi);            
+            Object result = command.ExecuteScalar();            
+            koneksi.Close();
+            return result.ToString();
+        }
+        //public List<float> selectLikelihoodByGP()
         //{
-
+        //    return
         //}
+        
     }
 }
