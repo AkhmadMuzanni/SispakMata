@@ -15,7 +15,7 @@ namespace ProjectSistemPakar
 
         public Sql()
         {
-            string str = "datasource = localhost; port = 3306; username = root;database =mangcook;";
+            string str = "datasource = localhost; port = 3306; username = root;database =spmata;";
             koneksi = new MySqlConnection(str);
         }
     }

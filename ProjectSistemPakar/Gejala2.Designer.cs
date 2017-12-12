@@ -38,10 +38,10 @@
             this.cbGejala26 = new System.Windows.Forms.CheckBox();
             this.cbGejala25 = new System.Windows.Forms.CheckBox();
             this.cbGejala06 = new System.Windows.Forms.CheckBox();
-            this.cbGejala03 = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnKembali = new System.Windows.Forms.Button();
+            this.cbGejala03 = new System.Windows.Forms.CheckBox();
             this.gbKebiasaan.SuspendLayout();
             this.gbPenglihatan.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +74,7 @@
             this.cbGejala08.Name = "cbGejala08";
             this.cbGejala08.Size = new System.Drawing.Size(219, 31);
             this.cbGejala08.TabIndex = 18;
+            this.cbGejala08.Tag = "G008";
             this.cbGejala08.Text = "Mata menjadi sangat sensitif terhadap cahaya";
             this.cbGejala08.UseVisualStyleBackColor = true;
             // 
@@ -83,6 +84,7 @@
             this.cbGejala07.Name = "cbGejala07";
             this.cbGejala07.Size = new System.Drawing.Size(219, 30);
             this.cbGejala07.TabIndex = 16;
+            this.cbGejala07.Tag = "G007";
             this.cbGejala07.Text = "Sulit melihat pada malam hari/ tidak ada cahaya";
             this.cbGejala07.UseVisualStyleBackColor = true;
             // 
@@ -92,16 +94,17 @@
             this.cbGejala04.Name = "cbGejala04";
             this.cbGejala04.Size = new System.Drawing.Size(219, 31);
             this.cbGejala04.TabIndex = 16;
+            this.cbGejala04.Tag = "G004";
             this.cbGejala04.Text = "Membutuhkan cahaya terang saat membaca";
             this.cbGejala04.UseVisualStyleBackColor = true;
             // 
             // gbPenglihatan
             // 
+            this.gbPenglihatan.Controls.Add(this.cbGejala03);
             this.gbPenglihatan.Controls.Add(this.cbGejala27);
             this.gbPenglihatan.Controls.Add(this.cbGejala26);
             this.gbPenglihatan.Controls.Add(this.cbGejala25);
             this.gbPenglihatan.Controls.Add(this.cbGejala06);
-            this.gbPenglihatan.Controls.Add(this.cbGejala03);
             this.gbPenglihatan.Location = new System.Drawing.Point(12, 69);
             this.gbPenglihatan.Name = "gbPenglihatan";
             this.gbPenglihatan.Size = new System.Drawing.Size(223, 188);
@@ -115,6 +118,7 @@
             this.cbGejala27.Name = "cbGejala27";
             this.cbGejala27.Size = new System.Drawing.Size(211, 36);
             this.cbGejala27.TabIndex = 11;
+            this.cbGejala27.Tag = "G027";
             this.cbGejala27.Text = "Tidak dapat melihat benda dekat ataupun benda jauh";
             this.cbGejala27.UseVisualStyleBackColor = true;
             // 
@@ -125,6 +129,7 @@
             this.cbGejala26.Name = "cbGejala26";
             this.cbGejala26.Size = new System.Drawing.Size(206, 17);
             this.cbGejala26.TabIndex = 10;
+            this.cbGejala26.Tag = "G026";
             this.cbGejala26.Text = "Tidak dapat melihat benda terlalu jauh";
             this.cbGejala26.UseVisualStyleBackColor = true;
             // 
@@ -135,6 +140,7 @@
             this.cbGejala25.Name = "cbGejala25";
             this.cbGejala25.Size = new System.Drawing.Size(213, 17);
             this.cbGejala25.TabIndex = 9;
+            this.cbGejala25.Tag = "G025";
             this.cbGejala25.Text = "Tidak dapat melihat benda terlalu dekat";
             this.cbGejala25.UseVisualStyleBackColor = true;
             // 
@@ -145,18 +151,9 @@
             this.cbGejala06.Name = "cbGejala06";
             this.cbGejala06.Size = new System.Drawing.Size(173, 17);
             this.cbGejala06.TabIndex = 8;
+            this.cbGejala06.Tag = "G006";
             this.cbGejala06.Text = "Tidak bisa melihat warna cerah";
             this.cbGejala06.UseVisualStyleBackColor = true;
-            // 
-            // cbGejala03
-            // 
-            this.cbGejala03.Location = new System.Drawing.Point(6, 19);
-            this.cbGejala03.Name = "cbGejala03";
-            this.cbGejala03.Size = new System.Drawing.Size(211, 31);
-            this.cbGejala03.TabIndex = 6;
-            this.cbGejala03.Text = "Tidak dapat mengenal warna dengan baik";
-            this.cbGejala03.UseVisualStyleBackColor = true;
-            this.cbGejala03.CheckedChanged += new System.EventHandler(this.cbGejala03_CheckedChanged);
             // 
             // label2
             // 
@@ -187,6 +184,16 @@
             this.btnKembali.Text = "KEMBALI";
             this.btnKembali.UseVisualStyleBackColor = true;
             this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
+            // 
+            // cbGejala03
+            // 
+            this.cbGejala03.Location = new System.Drawing.Point(6, 19);
+            this.cbGejala03.Name = "cbGejala03";
+            this.cbGejala03.Size = new System.Drawing.Size(206, 34);
+            this.cbGejala03.TabIndex = 12;
+            this.cbGejala03.Tag = "G003";
+            this.cbGejala03.Text = "Tidak dapat mengenal warna dengan baik";
+            this.cbGejala03.UseVisualStyleBackColor = true;
             // 
             // Gejala2
             // 
@@ -222,9 +229,9 @@
         public System.Windows.Forms.CheckBox cbGejala26;
         public System.Windows.Forms.CheckBox cbGejala25;
         public System.Windows.Forms.CheckBox cbGejala06;
-        public System.Windows.Forms.CheckBox cbGejala03;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnKembali;
+        public System.Windows.Forms.CheckBox cbGejala03;
     }
 }

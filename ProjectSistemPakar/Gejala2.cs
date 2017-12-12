@@ -13,9 +13,11 @@ namespace ProjectSistemPakar
     public partial class Gejala2 : Form
     {
         Login parent;
+        Model model;
         public Gejala2(Login parent)
         {
             this.parent = parent;
+            this.model = new Model();
             InitializeComponent();
             this.cbGejala03.CheckedChanged += new System.EventHandler(this.cbGejala03_CheckedChanged);
             this.cbGejala08.CheckedChanged += new System.EventHandler(this.cbGejala03_CheckedChanged);
@@ -48,6 +50,20 @@ namespace ProjectSistemPakar
             //    parent.hasil.txtGejala.Text += parent.data.getCekBox().ElementAt(i).Text + '\n';
             //}
             parent.hasil.txtGejala.Text = parent.data.forwardChaining(parent);
+            List<string> penyakit = new List<string>();
+            foreach (string gejala in parent.data.getCekBox())
+            {
+                List<string> tempPenyakit = model.selectPenyakitByGejala(gejala);
+                foreach (string iteratorPenyakit in tempPenyakit)
+                {
+                    if (!penyakit.Contains(iteratorPenyakit))
+                    {
+                        penyakit.Add(iteratorPenyakit);
+                        parent.hasil.txtKesimpulan.Text += iteratorPenyakit + Environment.NewLine;
+                    }
+                    
+                }
+            }
         }
 
         private void cbGejala03_CheckedChanged(object sender, EventArgs e)

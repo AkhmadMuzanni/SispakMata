@@ -39,6 +39,7 @@ namespace ProjectSistemPakar
             this.cbGejala22.CheckedChanged += new System.EventHandler(this.cbGejala02_CheckedChanged);
             this.cbGejala20.CheckedChanged += new System.EventHandler(this.cbGejala02_CheckedChanged);
             this.cbGejala15.CheckedChanged += new System.EventHandler(this.cbGejala02_CheckedChanged);
+            this.cbGejala11.CheckedChanged += new System.EventHandler(this.cbGejala02_CheckedChanged);
         }
 
         private void Gejala1_FormClosing(object sender, FormClosingEventArgs e)

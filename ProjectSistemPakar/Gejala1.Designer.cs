@@ -39,7 +39,6 @@
             this.cbGejala10 = new System.Windows.Forms.CheckBox();
             this.cbGejala09 = new System.Windows.Forms.CheckBox();
             this.cbGejala05 = new System.Windows.Forms.CheckBox();
-            this.cbGejala02 = new System.Windows.Forms.CheckBox();
             this.cbGejala01 = new System.Windows.Forms.CheckBox();
             this.gbKebiasaan = new System.Windows.Forms.GroupBox();
             this.cbGejala29 = new System.Windows.Forms.CheckBox();
@@ -55,6 +54,7 @@
             this.cbGejala20 = new System.Windows.Forms.CheckBox();
             this.cbGejala15 = new System.Windows.Forms.CheckBox();
             this.btnLanjut = new System.Windows.Forms.Button();
+            this.cbGejala02 = new System.Windows.Forms.CheckBox();
             this.gbPenglihatan.SuspendLayout();
             this.gbKebiasaan.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -82,6 +82,7 @@
             // 
             // gbPenglihatan
             // 
+            this.gbPenglihatan.Controls.Add(this.cbGejala02);
             this.gbPenglihatan.Controls.Add(this.cbGejala23);
             this.gbPenglihatan.Controls.Add(this.cbGejala18);
             this.gbPenglihatan.Controls.Add(this.cbGejala17);
@@ -90,7 +91,6 @@
             this.gbPenglihatan.Controls.Add(this.cbGejala10);
             this.gbPenglihatan.Controls.Add(this.cbGejala09);
             this.gbPenglihatan.Controls.Add(this.cbGejala05);
-            this.gbPenglihatan.Controls.Add(this.cbGejala02);
             this.gbPenglihatan.Controls.Add(this.cbGejala01);
             this.gbPenglihatan.Location = new System.Drawing.Point(12, 68);
             this.gbPenglihatan.Name = "gbPenglihatan";
@@ -105,6 +105,7 @@
             this.cbGejala23.Name = "cbGejala23";
             this.cbGejala23.Size = new System.Drawing.Size(211, 40);
             this.cbGejala23.TabIndex = 15;
+            this.cbGejala23.Tag = "G023";
             this.cbGejala23.Text = "Terdapat bintik bintik hitam berterbangan pada penglihatan";
             this.cbGejala23.UseVisualStyleBackColor = true;
             // 
@@ -115,6 +116,7 @@
             this.cbGejala18.Name = "cbGejala18";
             this.cbGejala18.Size = new System.Drawing.Size(223, 17);
             this.cbGejala18.TabIndex = 14;
+            this.cbGejala18.Tag = "G018";
             this.cbGejala18.Text = "Berkedip dalam waktu cepat saat melihat ";
             this.cbGejala18.UseVisualStyleBackColor = true;
             // 
@@ -124,6 +126,7 @@
             this.cbGejala17.Name = "cbGejala17";
             this.cbGejala17.Size = new System.Drawing.Size(211, 30);
             this.cbGejala17.TabIndex = 13;
+            this.cbGejala17.Tag = "G017";
             this.cbGejala17.Text = "Terdapat  benang kecil atau rambut penglihatan";
             this.cbGejala17.UseVisualStyleBackColor = true;
             // 
@@ -133,6 +136,7 @@
             this.cbGejala16.Name = "cbGejala16";
             this.cbGejala16.Size = new System.Drawing.Size(211, 33);
             this.cbGejala16.TabIndex = 12;
+            this.cbGejala16.Tag = "G016";
             this.cbGejala16.Text = "Terdapat bintik-bintik kecil pada pandangan";
             this.cbGejala16.UseVisualStyleBackColor = true;
             // 
@@ -143,6 +147,7 @@
             this.cbGejala12.Name = "cbGejala12";
             this.cbGejala12.Size = new System.Drawing.Size(158, 17);
             this.cbGejala12.TabIndex = 11;
+            this.cbGejala12.Tag = "G012";
             this.cbGejala12.Text = "Berkedip saat melihat lampu";
             this.cbGejala12.UseVisualStyleBackColor = true;
             // 
@@ -153,6 +158,7 @@
             this.cbGejala10.Name = "cbGejala10";
             this.cbGejala10.Size = new System.Drawing.Size(180, 17);
             this.cbGejala10.TabIndex = 10;
+            this.cbGejala10.Tag = "G010";
             this.cbGejala10.Text = "Penglihatan mata menjadi ganda";
             this.cbGejala10.UseVisualStyleBackColor = true;
             // 
@@ -162,6 +168,7 @@
             this.cbGejala09.Name = "cbGejala09";
             this.cbGejala09.Size = new System.Drawing.Size(211, 35);
             this.cbGejala09.TabIndex = 9;
+            this.cbGejala09.Tag = "G009";
             this.cbGejala09.Text = "Ada lingkaran putih dalam sumber cahaya seperti lampu";
             this.cbGejala09.UseVisualStyleBackColor = true;
             // 
@@ -172,18 +179,9 @@
             this.cbGejala05.Name = "cbGejala05";
             this.cbGejala05.Size = new System.Drawing.Size(128, 17);
             this.cbGejala05.TabIndex = 8;
+            this.cbGejala05.Tag = "G005";
             this.cbGejala05.Text = "Sulit mengenali wajah";
             this.cbGejala05.UseVisualStyleBackColor = true;
-            // 
-            // cbGejala02
-            // 
-            this.cbGejala02.Location = new System.Drawing.Point(6, 34);
-            this.cbGejala02.Name = "cbGejala02";
-            this.cbGejala02.Size = new System.Drawing.Size(211, 44);
-            this.cbGejala02.TabIndex = 7;
-            this.cbGejala02.Text = "Terdapat garis gelombang pada penglihatan";
-            this.cbGejala02.UseVisualStyleBackColor = true;
-            this.cbGejala02.CheckedChanged += new System.EventHandler(this.cbGejala02_CheckedChanged);
             // 
             // cbGejala01
             // 
@@ -192,6 +190,7 @@
             this.cbGejala01.Name = "cbGejala01";
             this.cbGejala01.Size = new System.Drawing.Size(138, 17);
             this.cbGejala01.TabIndex = 6;
+            this.cbGejala01.Tag = "G001";
             this.cbGejala01.Text = "Penglihatan mata kabur";
             this.cbGejala01.UseVisualStyleBackColor = true;
             // 
@@ -217,6 +216,7 @@
             this.cbGejala29.Name = "cbGejala29";
             this.cbGejala29.Size = new System.Drawing.Size(214, 17);
             this.cbGejala29.TabIndex = 20;
+            this.cbGejala29.Tag = "G029";
             this.cbGejala29.Text = "Anda merupakan keturunan buta warna";
             this.cbGejala29.UseVisualStyleBackColor = true;
             // 
@@ -227,6 +227,7 @@
             this.cbGejala28.Name = "cbGejala28";
             this.cbGejala28.Size = new System.Drawing.Size(116, 17);
             this.cbGejala28.TabIndex = 19;
+            this.cbGejala28.Tag = "G028";
             this.cbGejala28.Text = "Anda berusia lanjut";
             this.cbGejala28.UseVisualStyleBackColor = true;
             // 
@@ -236,6 +237,7 @@
             this.cbGejala19.Name = "cbGejala19";
             this.cbGejala19.Size = new System.Drawing.Size(219, 31);
             this.cbGejala19.TabIndex = 18;
+            this.cbGejala19.Tag = "G019";
             this.cbGejala19.Text = "Anda memiringkan salah satu bagian mata saat melihat objek";
             this.cbGejala19.UseVisualStyleBackColor = true;
             // 
@@ -246,6 +248,7 @@
             this.cbGejala14.Name = "cbGejala14";
             this.cbGejala14.Size = new System.Drawing.Size(182, 17);
             this.cbGejala14.TabIndex = 17;
+            this.cbGejala14.Tag = "G014";
             this.cbGejala14.Text = "Mual dan muntah saat sakit mata";
             this.cbGejala14.UseVisualStyleBackColor = true;
             // 
@@ -256,6 +259,7 @@
             this.cbGejala13.Name = "cbGejala13";
             this.cbGejala13.Size = new System.Drawing.Size(106, 17);
             this.cbGejala13.TabIndex = 16;
+            this.cbGejala13.Tag = "G013";
             this.cbGejala13.Text = "Sakit mata parah";
             this.cbGejala13.UseVisualStyleBackColor = true;
             // 
@@ -265,6 +269,7 @@
             this.cbGejala11.Name = "cbGejala11";
             this.cbGejala11.Size = new System.Drawing.Size(219, 31);
             this.cbGejala11.TabIndex = 16;
+            this.cbGejala11.Tag = "G011";
             this.cbGejala11.Text = "Rasa sakit atau nyeri pada bagian belakang mata";
             this.cbGejala11.UseVisualStyleBackColor = true;
             // 
@@ -289,6 +294,7 @@
             this.cbGejala24.Name = "cbGejala24";
             this.cbGejala24.Size = new System.Drawing.Size(204, 17);
             this.cbGejala24.TabIndex = 19;
+            this.cbGejala24.Tag = "G024";
             this.cbGejala24.Text = "Terdapat bintik bintik putih pada mata";
             this.cbGejala24.UseVisualStyleBackColor = true;
             // 
@@ -298,6 +304,7 @@
             this.cbGejala21.Name = "cbGejala21";
             this.cbGejala21.Size = new System.Drawing.Size(219, 31);
             this.cbGejala21.TabIndex = 18;
+            this.cbGejala21.Tag = "G021";
             this.cbGejala21.Text = "Muncul bintitan di kelopak mata bagian atas dan atau bagian bawah";
             this.cbGejala21.UseVisualStyleBackColor = true;
             // 
@@ -308,6 +315,7 @@
             this.cbGejala22.Name = "cbGejala22";
             this.cbGejala22.Size = new System.Drawing.Size(185, 17);
             this.cbGejala22.TabIndex = 17;
+            this.cbGejala22.Tag = "G022";
             this.cbGejala22.Text = "Mata tidak mengeluarkan kotoran";
             this.cbGejala22.UseVisualStyleBackColor = true;
             // 
@@ -318,6 +326,7 @@
             this.cbGejala20.Name = "cbGejala20";
             this.cbGejala20.Size = new System.Drawing.Size(139, 17);
             this.cbGejala20.TabIndex = 16;
+            this.cbGejala20.Tag = "G020";
             this.cbGejala20.Text = "Mata terlihat tidak fokus";
             this.cbGejala20.UseVisualStyleBackColor = true;
             // 
@@ -328,6 +337,7 @@
             this.cbGejala15.Name = "cbGejala15";
             this.cbGejala15.Size = new System.Drawing.Size(157, 17);
             this.cbGejala15.TabIndex = 16;
+            this.cbGejala15.Tag = "G015";
             this.cbGejala15.Text = "Mata berwarna merah / biru";
             this.cbGejala15.UseVisualStyleBackColor = true;
             // 
@@ -340,6 +350,16 @@
             this.btnLanjut.Text = "LANJUT";
             this.btnLanjut.UseVisualStyleBackColor = true;
             this.btnLanjut.Click += new System.EventHandler(this.btnLanjut_Click);
+            // 
+            // cbGejala02
+            // 
+            this.cbGejala02.Location = new System.Drawing.Point(6, 42);
+            this.cbGejala02.Name = "cbGejala02";
+            this.cbGejala02.Size = new System.Drawing.Size(199, 36);
+            this.cbGejala02.TabIndex = 16;
+            this.cbGejala02.Tag = "G002";
+            this.cbGejala02.Text = "Terdapat garis gelombang pada penglihatan";
+            this.cbGejala02.UseVisualStyleBackColor = true;
             // 
             // Gejala1
             // 
@@ -379,7 +399,6 @@
         public System.Windows.Forms.CheckBox cbGejala10;
         public System.Windows.Forms.CheckBox cbGejala09;
         public System.Windows.Forms.CheckBox cbGejala05;
-        public System.Windows.Forms.CheckBox cbGejala02;
         public System.Windows.Forms.CheckBox cbGejala01;
         private System.Windows.Forms.GroupBox gbKebiasaan;
         public System.Windows.Forms.CheckBox cbGejala29;
@@ -395,5 +414,6 @@
         public System.Windows.Forms.CheckBox cbGejala20;
         public System.Windows.Forms.CheckBox cbGejala15;
         private System.Windows.Forms.Button btnLanjut;
+        public System.Windows.Forms.CheckBox cbGejala02;
     }
 }
