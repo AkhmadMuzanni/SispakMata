@@ -38,6 +38,42 @@ namespace ProjectSistemPakar
             koneksi.Close();
             return result.ToString();
         }
+        public float selectPrior(string idPenyakit)
+        {
+            koneksi.Open();
+            queri = "SELECT prior from penyakit where idPenyakit = '" + idPenyakit + "'";
+            command = new MySqlCommand(queri, koneksi);
+            Object result = command.ExecuteScalar();
+            koneksi.Close();
+            return (float)result;
+        }
+        public float selectLikelihood(string idPenyakit, string idGejala)
+        {
+            koneksi.Open();
+            queri = "SELECT likelihood from gejalapenyakit where idPenyakit = '" + idPenyakit + "' AND idGejala = '" + idGejala + "'";
+            command = new MySqlCommand(queri, koneksi);
+            Object result = command.ExecuteScalar();
+            koneksi.Close();
+            return (float)result;
+        }
+        public string selectNamaPenyakit(string idPenyakit)
+        {
+            koneksi.Open();
+            queri = "SELECT namaPenyakit from penyakit where idPenyakit = '" + idPenyakit + "'";
+            command = new MySqlCommand(queri, koneksi);
+            Object result = command.ExecuteScalar();
+            koneksi.Close();
+            return result.ToString();
+        }
+        public string selectNamaGejala(string idGejala)
+        {
+            koneksi.Open();
+            queri = "SELECT namaGejala from gejala where idGejala = '" + idGejala + "'";
+            command = new MySqlCommand(queri, koneksi);
+            Object result = command.ExecuteScalar();
+            koneksi.Close();
+            return result.ToString();
+        }
         //public List<float> selectLikelihoodByGP()
         //{
         //    return

@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller.cs" />
-    <Compile Include="DataQuery.cs" />
     <Compile Include="Gejala1.cs">
       <SubType>Form</SubType>
     </Compile>

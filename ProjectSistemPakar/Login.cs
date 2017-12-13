@@ -15,7 +15,7 @@ namespace ProjectSistemPakar
         public Gejala1 gejala1;
         public Gejala2 gejala2;
         public Hasil hasil;
-        public DataQuery data;
+        public Controller data;
         public Login()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace ProjectSistemPakar
                 gejala1 = new Gejala1(this);
                 gejala2 = new Gejala2(this);
                 hasil = new Hasil(this);
-                data = new DataQuery();
+                data = new Controller(this);
                 this.Visible = false;
                 gejala1.Visible = true;
             }

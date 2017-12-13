@@ -44,34 +44,9 @@ namespace ProjectSistemPakar
         {
             this.Visible = false;
             parent.hasil.Visible = true;
-            //parent.hasil.txtGejala.Text = "";
-            //for (int i = 0; i < parent.data.getCekBox().Count; i++) 
-            //{
-            //    parent.hasil.txtGejala.Text += parent.data.getCekBox().ElementAt(i).Text + '\n';
-            //}
-            parent.hasil.txtGejala.Text = parent.data.forwardChaining(parent);
-            List<string> penyakit = new List<string>();
-            foreach (string gejala in parent.data.getCekBox())
-            {
-                List<string> tempPenyakit = model.selectPenyakitByGejala(gejala);
-                foreach (string iteratorPenyakit in tempPenyakit)
-                {
-                    if (!penyakit.Contains(iteratorPenyakit))
-                    {
-                        penyakit.Add(iteratorPenyakit);
-                        //parent.hasil.txtKesimpulan.Text += iteratorPenyakit + Environment.NewLine;
-                    }
-                    
-                }
-            }
-            foreach(string idPenyakit in penyakit)
-            {
-                foreach(string idGejala in parent.data.getCekBox())
-                {
-                    string idGejalaPenyakit = model.selectGejalaPenyakit(idPenyakit, idGejala);
-                    parent.hasil.txtKesimpulan.Text += idGejalaPenyakit + Environment.NewLine;
-                }
-            }
+            parent.hasil.txtGejala.Text = parent.data.forwardChaining();
+            parent.hasil.txtKesimpulan.Text = "Kesimpulan " + Environment.NewLine;
+            parent.data.naiveBayes();
         }
 
         private void cbGejala03_CheckedChanged(object sender, EventArgs e)

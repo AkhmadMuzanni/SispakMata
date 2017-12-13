@@ -51,6 +51,7 @@
             this.txtKesimpulan.Location = new System.Drawing.Point(12, 193);
             this.txtKesimpulan.Multiline = true;
             this.txtKesimpulan.Name = "txtKesimpulan";
+            this.txtKesimpulan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtKesimpulan.Size = new System.Drawing.Size(460, 227);
             this.txtKesimpulan.TabIndex = 10;
             this.txtKesimpulan.Text = "Kesimpulan";
@@ -60,6 +61,7 @@
             this.txtGejala.Location = new System.Drawing.Point(12, 72);
             this.txtGejala.Multiline = true;
             this.txtGejala.Name = "txtGejala";
+            this.txtGejala.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtGejala.Size = new System.Drawing.Size(460, 115);
             this.txtGejala.TabIndex = 9;
             this.txtGejala.Text = "Gejala";
